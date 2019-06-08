@@ -19,5 +19,50 @@ public class EnumTypes {
         other
     }
 
+    public enum ParentsStatus {
+        other,
+        married,
+        divorced
+    }
+
+    public enum EconomicStatus {
+        average,
+        low,
+        high
+    }
+
+    public enum Origin {
+        israeli,
+        other
+    }
+
+    public enum Nation {
+        jewish,
+        muslim,
+        christian,
+        beduin,
+        other
+    }
+
+    public enum Restriction {
+        smoking,
+        other
+    }
+
+
+
+
+    public enum Urgency {
+        one,
+        two,
+        three,
+        four,
+        five
+    }
+
+    public enum Topic {
+        manager,
+    }
+
 
 }

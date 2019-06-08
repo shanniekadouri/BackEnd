@@ -34,10 +34,30 @@ public class ChildController {
                           @RequestParam(value = "staffInCharge", defaultValue = "") String staffInCharge,
                           @RequestParam(value = "status", defaultValue = "other") String status,
                           @RequestParam(value = "phoneNum", defaultValue = "") String phoneNum,
-                          @RequestParam(value = "eMail", defaultValue = "") String eMail) {
+                          @RequestParam(value = "eMail", defaultValue = "") String eMail,
+                          @RequestParam(value = "parentsStatus", defaultValue = "") String parentsStatus,
+                          @RequestParam(value = "numOfSiblings", defaultValue = "") String numOfSiblings,
+                          @RequestParam(value = "economicStatus", defaultValue = "") String economicStatus,
+                          @RequestParam(value = "origin", defaultValue = "") String origin,
+                          @RequestParam(value = "nation", defaultValue = "") String nation,
+                          @RequestParam(value = "placeOfBirth", defaultValue = "") String placeOfBirth,
+                          @RequestParam(value = "passportNum", defaultValue = "") String passportNum,
+                          @RequestParam(value = "citizenship", defaultValue = "") String citizenship,
+                          @RequestParam(value = "dream", defaultValue = "") String dream,
+                          @RequestParam(value = "dreamPriority", defaultValue = "") String dreamPriority,
+                          @RequestParam(value = "personalSidur", defaultValue = "") String personalSidur,
+                          @RequestParam(value = "restriction1", defaultValue = "") String restriction1,
+                          @RequestParam(value = "restriction2", defaultValue = "") String restriction2,
+                          @RequestParam(value = "endDate1", defaultValue = "") String endDate1,
+                          @RequestParam(value = "endDate2", defaultValue = "") String endDate2,
+                          @RequestParam(value = "leaveDate", defaultValue = "") String leaveDate,
+                          @RequestParam(value = "moveTo", defaultValue = "") String moveTo,
+                          @RequestParam(value = "reasonForLeaving", defaultValue = "") String reasonForLeaving) {
 
         return new Child(this.counter.incrementAndGet(), idNumber, arrivaleDate, firstName, lastName, gender, dateOfBirth,
-                city, address, staffInCharge, status, phoneNum, eMail, mothersName, fathersName, house);
+                city, address, staffInCharge, status, phoneNum, eMail, mothersName, fathersName, house, parentsStatus ,numOfSiblings,
+                economicStatus, origin, nation, placeOfBirth, passportNum, citizenship, dream, dreamPriority, personalSidur,
+                restriction1, restriction2, endDate1, endDate2, leaveDate, moveTo, reasonForLeaving);
             /*
             The implementation of the method body creates and returns a new Greeting object with id and content
             attributes based on the next value from the counter, and formats the given name by using the greeting template.
