@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-public class ChildController {
+public class AnnouncementController {
 
     private static final String template = "Hello, %s!";// by marking %s, we can use String format to insert a String to replace %s
     private final AtomicLong counter = new AtomicLong();//atomic increment of long value
@@ -19,7 +19,7 @@ public class ChildController {
      If the name parameter is absent in the request, the defaultValue of "World" is used
     */
     @RequestMapping("/greetings")
-    public Child greeting(@RequestParam(value = "id", defaultValue = "") String idNumber,
+    public Announcement greeting(@RequestParam(value = "id", defaultValue = "") String idNumber,
                           @RequestParam(value = "arrivalDate", defaultValue = "") String arrivaleDate,
                           @RequestParam(value = "firstName", defaultValue = "") String firstName,
                           @RequestParam(value = "lastName", defaultValue = "") String lastName,
@@ -53,7 +53,7 @@ public class ChildController {
                           @RequestParam(value = "moveTo", defaultValue = "") String moveTo,
                           @RequestParam(value = "reasonForLeaving", defaultValue = "") String reasonForLeaving) {
 
-        return new Child(this.counter.incrementAndGet(), idNumber, arrivaleDate, firstName, lastName, gender, dateOfBirth,
+        return new Announcement(this.counter.incrementAndGet(), idNumber, arrivaleDate, firstName, lastName, gender, dateOfBirth,
                 city, address, staffInCharge, status, phoneNum, eMail, mothersName, fathersName, house, parentsStatus ,numOfSiblings,
                 economicStatus, origin, nation, placeOfBirth, passportNum, citizenship, dream, dreamPriority, personalSidur,
                 restriction1, restriction2, endDate1, endDate2, leaveDate, moveTo, reasonForLeaving);
@@ -77,5 +77,6 @@ public class ChildController {
          chosen to convert the Greeting instance to JSON.
          */
 }
+
 
 

@@ -49,9 +49,6 @@ public class EnumTypes {
         other
     }
 
-
-
-
     public enum Urgency {
         one,
         two,
